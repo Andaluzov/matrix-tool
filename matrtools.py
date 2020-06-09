@@ -1,11 +1,10 @@
-def add(A,B):
-    Crow=[]
-# comment
-    for i in range(len(A)):
-        ccol=[]
-        for j in range(len(A[0])):
-            ccol.append(A[i][j]+B[i][j])
+def add(a,b):
+    c_row=[]
+# add of matrix
+    for i in range(len(a)):
+        c_col=[]
+        for j in range(len(a[0])):
+            c_col.append(a[i][j]+b[i][j])
 
-        Crow.append(ccol)
-    print(Crow)
-    return Crow
+        c_row.append(ccol)
+        return c_row
