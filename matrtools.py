@@ -8,3 +8,8 @@ def add(a, b):
 
         c_row.append(c_col)
     return c_row
+
+def print_matrix(a):
+    for i in range(len(a)):
+       print(a[i])
+
