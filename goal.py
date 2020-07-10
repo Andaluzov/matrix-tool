@@ -1,5 +1,6 @@
 # noinspection PyUnresolvedReferences
 import matrtools as mt
+
 print('сложение матриц')
 matr_a = [[1, 2],[3, 4],[5, 6]]
 matr_b = [[0, 2],[1, 0],[4, 7]]
@@ -28,20 +29,15 @@ matr_a = [
 print('1')
 a_transp = mt.transpose(matr_a)
 mt.print_matrix(a_transp)
-matr_a = [
- [1, 2],
- [3, 4],
- [5, 6]
-]
-print('2')
-a_transp = mt.transpose(matr_a)
-mt.print_matrix(a_transp)
 
-matr_a = [
- [1, 2],
- [3, 4],
- [5, 6]
-]
-print('3')
-matr_b= mt.transpose(mt.transpose(matr_a))
-mt.print_matrix(matr_b)
+
+
+
+#4
+print(' Задание4')
+print(' след квадратной матрицы (сумма элементов на главной диагонали)')
+matr_a = mt.zapoln_matr()
+mt.print_matrix(matr_a)
+print('test1')
+a_trace = mt.trace(matr_a)
+print(a_trace)

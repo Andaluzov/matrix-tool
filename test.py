@@ -3,13 +3,17 @@
 test program
 '''
 import matrtools as mt
-matr_a=[[1, 2],[3, 4],[5, 6]]
-matr_b=[[0, 2],[1, 0],[4, 7]]
+print(' Метод Гаусса')
+matr_a = [[2,4], [3,5], [6,7]]
+#matr_a = mt.zapoln_matr()
+mt.print_matrix(matr_a)
+print('test1')
 
-#test.zapoln_matr()
-#test.zapoln_matr()
-rez_matr=mt.add(matr_a, matr_b)
-mt.print_matrix(rez_matr)
+
+a_gauss = mt.echelon_form(matr_a)
+mt.print_matrix(a_gauss)
+
+
 
 
 
