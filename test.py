@@ -4,7 +4,7 @@ test program
 '''
 import matrtools as mt
 print(' Метод Гаусса')
-matr_a = [[2,4], [3,5], [6,7]]
+matr_a = [[0,2,3], [2,4,6]]
 #matr_a = mt.zapoln_matr()
 mt.print_matrix(matr_a)
 print('test1')
