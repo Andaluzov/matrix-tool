@@ -133,43 +133,6 @@ def mult_num(a,number):
         matr_rez.append(a[i] * number)
     return matr_rez
 
-def iter_1(a,start_row,start_col):
-    '''
-
-    :param a:
-    :return:
-    '''
-    n = len(a)
-    m = len(a[0])
-    j = start_col
-    while (j < m):
-        i = start_row
-        while (a[i][j] == 0) and (i <n):
-            i += 1
-        else:
-            row_unz = i
-            col_unz = j
-            break
-        j += 1
-
-
-    print('rc=', row_unz, col_unz)
-    if row_unz != start_row:
-        a = change_row(a, row_unz, start_row)
-    ##############
-
-    row_unz = start_row
-    a[row_unz] = div_num(a[row_unz], a[row_unz][col_unz])
-    #############
-
-    i = row_unz + 1
-    while i < n:
-        dop_row = []
-        dop_row = mult_num(a[row_unz], -a[i][col_unz])
-        a[i] = add_row(a[i], dop_row)
-
-        i += 1
-    return
 
 def echelon_form(a):
     '''
@@ -180,13 +143,37 @@ def echelon_form(a):
 
     n = len(a)
     m = len(a[0])
-    ind_col = 0
-    ind_col = 0
-    ind_row = 0
-    while ind_row<n or ind_col<m:
-        iter_1(a,ind_row,ind_col)
-        ind_col+=1
-        ind_row+=1
+    row_unz = 0
+    col_unz = 0
+
+    j = 0
+    while  (j <= m):
+        i = 0
+        while (a[i][j] == 0)  and (i <= n):
+            i+=1
+        else:
+            row_unz = i
+            col_unz = j
+            break
+        j+=1
+
+    print('rc=', row_unz, col_unz)
+    if row_unz != 0:
+        a = change_row(a,row_unz,0)
+##############
+
+    row_unz = 0
+    a[row_unz] = div_num(a[row_unz], a[row_unz][col_unz])
+    #############
+
+
+    i = row_unz+1
+    while i <n:
+        dop_row = []
+        dop_row = mult_num(a[row_unz], -a[i][col_unz])
+        a[i] = add_row(a[i],dop_row)
+
+        i += 1
 
 
     return a
